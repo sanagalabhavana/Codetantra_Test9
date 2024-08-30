@@ -1,0 +1,44 @@
+package Day_9_Inteheritance_continue_problems;
+import java.util.*;
+class Sports{
+	String getName() {
+		return "Generic Sports";
+	}
+	void  getNumberOfTeamMembers() {
+		System.out.println("Each team has 11 players in "+getName());
+	}
+}
+class Soccer extends Sports{
+	private static int players;
+	private static String sport;
+	Soccer(int players,String sport){
+		this.players=players;
+		this.sport=sport;
+	}
+	String getName() {
+		return sport;
+	}
+	@Override
+	void getNumberOfTeamMembers() {
+		System.out.println("Each team has "+players+" players is "+sport);
+	}
+}
+
+public class Inheritance_ex2_method_overriding {
+
+	public static void main(String[] args) {
+		Scanner s=new Scanner(System.in);
+		String sport=s.nextLine();
+		int players=s.nextInt();
+		
+		Sports c1=new Sports();
+		Soccer c2=new Soccer(players,sport);
+		System.out.println(c1.getName());
+		c1.getNumberOfTeamMembers();
+		System.out.println(c2.getName());
+		c2.getNumberOfTeamMembers();
+		
+
+	}
+
+}
