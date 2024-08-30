@@ -1,0 +1,66 @@
+package Day_9_Inteheritance_continue_problems;
+
+import java.util.Scanner;
+
+class Performer{
+	@Override
+	void perform() {
+		System.out.println("Performer is performing...");
+	}
+}
+class Clown extends Performer{
+	@Override
+	void perform() {
+		System.out.println("Clown is juggling balls...");
+	}
+}
+class Acrobat extends Performer{
+	@Override
+	void perform() {
+		System.out.println("Acrobat are doing the aerial acts...");
+	}
+}
+class Magician extends Performer{
+	@Override
+	void perform() {
+		System.out.println("Magicians are captivating the audience with their tricks...");
+	}
+}
+
+class Juggler extends Performer{
+	@Override
+	void perform() {
+		System.out.println("Juggler is juggling pins...");
+	}
+}
+public class Inheritance_ex_method_override {
+
+	public static void main(String[] args) {
+		Scanner s=new Scanner(System.in);
+		//String person=args[0];
+		String person=s.nextLine();
+		switch(person) {
+		case "clown":
+			Performer performer1=new Clown();
+			performer1.perform();
+			break;
+		case "juggler":
+			Performer performer2 =new Juggler();
+			performer2.perform();
+			break;
+		case "acrobat":
+			Performer performer3 =new Acrobat();
+			performer3.perform();
+			break;
+		case "magician":
+			Performer performer4 =new Magician();
+			performer4.perform();
+			break;
+		default:
+			System.out.println("No such performer");
+			return;
+		}
+
+	}
+
+}
