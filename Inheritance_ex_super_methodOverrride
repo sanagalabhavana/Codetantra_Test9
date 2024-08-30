@@ -1,0 +1,29 @@
+package Day_9_Inteheritance_continue_problems;
+import java.util.*;
+
+class Statement{
+	void run() {
+		System.out.println("General statement: vehicle is working...");
+	}
+}
+class Vehicle extends Statement{
+	String vehicle;
+	public Vehicle(String vehicle) {
+		this.vehicle=vehicle;
+	}
+	void run() {
+		super.run();
+		System.out.println("Specific Statement: "+vehicle+" is working...");
+	}
+}
+
+public class Inheritance_ex_super_methodOverrride {
+
+	public static void main(String[] args) {
+		Scanner s=new Scanner(System.in);
+		Vehicle obj=new Vehicle(s.nextLine());
+		obj.run();
+
+	}
+
+}
