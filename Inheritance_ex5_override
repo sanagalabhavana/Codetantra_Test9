@@ -1,0 +1,38 @@
+package Day_9_Inteheritance_continue_problems;
+
+class Animal{
+	void makeSound() {
+		System.out.println("The animal makes a sound.");
+	}
+}
+class Dog extends Animal{
+	@Override
+	void makeSound() {
+		System.out.println("The dog barks.");
+	}
+}
+class Cat extends Animal{
+	@Override
+	void makeSound() {
+		System.out.println("The cat meows.");
+	}
+}
+public class Inheritance_ex5_override {
+
+	public static void main(String[] args) {
+		Animal ani;
+		String option=args[0].toLowerCase();
+		if(option.equals("dog")){
+			ani=new Dog();
+			ani.makeSound();
+		}
+		else if(option.equals("cat")) {
+			ani=new Cat();
+			ani.makeSound();
+		}else {
+			System.out.println("Unknown animal type: "+option);
+		}
+
+	}
+
+}
