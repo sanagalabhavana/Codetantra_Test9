@@ -1,0 +1,34 @@
+package Day_9_Inteheritance_continue_problems;
+
+import java.util.Scanner;
+
+class Clay{
+	String shape;
+	Clay (String shape){
+		this.shape=shape;
+	}
+	void mould() {
+		System.out.println("Clay is "+shape);
+	}
+}
+class Shape extends Clay{
+	Shape(String shape){
+		super(shape);
+	}
+	@Override
+	void mould() {
+		System.out.println("Clay is moulded into "+shape);
+	}
+}
+public class Inheritance_ex4_super_shape {
+
+	public static void main(String[] args) {
+		Scanner s=new Scanner(System.in);
+		Clay myShape1 =new Clay("shapeless");
+		Clay myShape2=new Shape(s.nextLine());
+		myShape1.mould();
+		myShape2.mould();
+
+	}
+
+}
